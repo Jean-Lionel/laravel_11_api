@@ -14,6 +14,7 @@ class AuthorBookController extends Controller
     public function index()
     {
         //
+        return AuthorBook::all();
     }
 
     /**
@@ -30,6 +31,7 @@ class AuthorBookController extends Controller
     public function show(AuthorBook $authorBook)
     {
         //
+        return $authorBook;
     }
 
     /**

@@ -30,7 +30,7 @@ class AuthorController extends Controller
     public function show(Author $author)
     {
         //
-        return $author;
+        return $author->with('books')->get();
     }
 
     /**

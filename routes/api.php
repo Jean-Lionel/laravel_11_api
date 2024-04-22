@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthorBookController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookController;
 use Illuminate\Http\Request;
@@ -9,7 +10,7 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::get('authors',[AuthorController::class, 'index']);
-Route::get('authors/{author}',[AuthorController::class, 'show']);
-Route::get('books',[BookController::class, 'index']);
-Route::get('books/{book}',[BookController::class, 'show']);
+
+Route::apiResource('books', BookController::class);
+Route::apiResource('authors', AuthorController::class);
+Route::apiResource('author_books', AuthorBookController::class);

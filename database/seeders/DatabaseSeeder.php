@@ -19,9 +19,9 @@ class DatabaseSeeder extends Seeder
          Book::factory(1000)->create();
          Author::factory(100)->create();
          AuthorBook::factory(100)->create();
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        // User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
     }
 }
