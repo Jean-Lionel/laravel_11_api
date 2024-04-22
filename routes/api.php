@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthorController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -7,11 +8,5 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::get('authors', function(){
-    return [
-        'name' => 'Benedictus',
-        'age' => 23,
-        'gender' => 'male',
-
-    ];
-});
+Route::get('authors',[AuthorController::class, 'index']);
+Route::get('authors/{author}',[AuthorController::class, 'show']);

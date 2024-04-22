@@ -13,7 +13,7 @@ class AuthorController extends Controller
      */
     public function index()
     {
-        //
+        return Author::latest()->paginate();
     }
 
     /**
@@ -30,6 +30,7 @@ class AuthorController extends Controller
     public function show(Author $author)
     {
         //
+        return $author;
     }
 
     /**
