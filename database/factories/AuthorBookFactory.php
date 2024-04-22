@@ -18,6 +18,8 @@ class AuthorBookFactory extends Factory
     {
         return [
             //
+            'author_id' => $this->faker->numberBetween(1, 100),
+            'book_id' => $this->faker->numberBetween(1, 1000),
         ];
     }
 }
