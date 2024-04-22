@@ -13,7 +13,8 @@ class BookController extends Controller
      */
     public function index()
     {
-        //
+
+        return Book::latest()->paginate();
     }
 
     /**
@@ -30,6 +31,7 @@ class BookController extends Controller
     public function show(Book $book)
     {
         //
+        return $book;
     }
 
     /**
